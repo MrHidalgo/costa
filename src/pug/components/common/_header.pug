@@ -3,5 +3,28 @@
 nav#header.header
   .c-grid
     .header__wrapper
+      .header__wrapper-left
+
+        nav.header__social
+          a(href="#")
+            i.icon-font.icon-facebook
+          a(href="#")
+            i.icon-font.icon-instagram
+
+        .header__address
+          a(href="tel:7252239922") 725-223-9922
+          p | LAS VEGAS, NV
+
+      .header__wrapper-middle
+
+        .logo.logo--header
+          a.logo__btn(href="#")
+            img(src="img/logo.svg" alt="")
+
+      .header__wrapper-right
+
+        .header__hamburger
+          p Menu
+          +hamburger
 
 // HEADER :: END

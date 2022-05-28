@@ -3,6 +3,18 @@
 .logo {
   display: flex;
 
+  &.logo--header {
+    @include adaptive(1439) {
+      max-width: 275px;
+    }
+    @include adaptive(1023) {
+      max-width: 225px;
+    }
+    @include adaptive(767) {
+      max-width: 175px;
+    }
+  }
+
   &.logo--footer {
     max-width: 207px;
     @include adaptive(767) {
