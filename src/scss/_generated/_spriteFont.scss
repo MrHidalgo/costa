@@ -27,11 +27,17 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == facebook {
+	@if $filename == close {
 		$char: "\E001";
 	}
-	@if $filename == instagram {
+	@if $filename == corner {
 		$char: "\E002";
+	}
+	@if $filename == facebook {
+		$char: "\E003";
+	}
+	@if $filename == instagram {
+		$char: "\E004";
 	}
 
 	@return $char;
@@ -48,6 +54,14 @@
 	}
 }
 
+.icon-close {
+	@include icon(close);
+
+}
+.icon-corner {
+	@include icon(corner);
+
+}
 .icon-facebook {
 	@include icon(facebook);
 

@@ -15,6 +15,13 @@
     }
   }
 
+  &.logo--menu {
+    max-width: 207px;
+    @include adaptive(767) {
+      max-width: 175px;
+    }
+  }
+
   &.logo--footer {
     max-width: 207px;
     @include adaptive(767) {

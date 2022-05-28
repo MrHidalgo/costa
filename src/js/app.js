@@ -3,6 +3,8 @@ import HeaderFixed
   from "./macros/headerFixed";
 import HamburgerMenu
   from "./macros/hamburgerMenu";
+import MenuToggle
+  from "./macros/menuToggle";
 
 
 // EVENT LISTENER - LOAD
@@ -15,6 +17,7 @@ window.addEventListener('load', (ev) => {
   // MACROS
   HeaderFixed.init();
   HamburgerMenu.init();
+  MenuToggle.init();
 
 }, false);
 

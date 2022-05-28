@@ -12,7 +12,7 @@ const HamburgerMenu = (function() {
       const elem = ev.currentTarget;
 
       elem.classList.toggle("is-active");
-      // mobileContainer.classList.toggle("is-open");
+      mobileContainer.classList.toggle("is-open");
 
       hideScrollContainer.forEach((val, idx) => {
         val.classList.toggle("is-hideScroll");
