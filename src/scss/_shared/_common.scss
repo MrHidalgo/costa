@@ -1,3 +1,14 @@
 // COMMON :: START
 
+.copyright {
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  color: #fff;
+  @include adaptive(767) {
+    font-size: 13px;
+    line-height: normal;
+  }
+}
+
 // COMMON :: END

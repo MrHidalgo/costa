@@ -1,5 +1,202 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+  padding-top: 110px;
+  padding-bottom: 80px;
+  background-image: url('../img/img-footer-bg@2x.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include adaptive(767) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  &__wrapper {
+    &-1 {
+      padding-bottom: 100px;
+      @include adaptive(767) {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+      }
+    }
+    &-2 {
+      display: flex;
+      justify-content: space-between;
+      @include adaptive(1023) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-left,
+    &-right {
+      @include adaptive(1023) {
+        width: 100%;
+      }
+    }
+
+    &-left {
+      display: flex;
+      @include adaptive(1279) {
+        flex-direction: column;
+      }
+      @include adaptive(1023) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      @include adaptive(767) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      @include adaptive(1023) {
+        align-items: center;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @include adaptive(1023) {
+        align-items: center;
+        padding-top: 25px;
+        text-align: center;
+      }
+      @include adaptive(767) {
+        padding-top: 50px;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    padding-right: 170px;
+    @include adaptive(1279) {
+      padding-right: 0;
+      padding-bottom: 50px;
+    }
+    @include adaptive(767) {
+      align-items: center;
+    }
+
+    a {
+      display: flex;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      line-height: 46px;
+      text-transform: uppercase;
+      @include hoverLink($c-blue, $c-white);
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    @include adaptive(767) {
+      align-items: center;
+      padding-bottom: 50px;
+    }
+
+    a,
+    p {
+      font-size: 18px;
+      letter-spacing: 0.02em;
+      color: #fff;
+      @include adaptive(767) {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      display: flex;
+      margin-bottom: 15px;
+      line-height: 46px;
+      font-weight: bold;
+      @include hoverLink($c-blue, $c-white);
+      @include adaptive(767) {
+        margin-bottom: 5px;
+      }
+    }
+
+    p {
+      line-height: 28px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        margin-right: 30px;
+      }
+
+      &:hover {
+        .icon-font {
+          color: $c-blue;
+          @include transition(color);
+        }
+      }
+
+      .icon-font {
+        color: #ffffff;
+        font-size: 25px;
+        @include transition(color);
+      }
+    }
+  }
+
+  &__tos {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    @include adaptive(767) {
+      flex-direction: column;
+      padding-bottom: 50px;
+    }
+
+    a,
+    span {
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      line-height: 26px;
+      color: #fff;
+      text-transform: uppercase;
+      @include adaptive(767) {
+        font-size: 13px;
+        line-height: 30px;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      @include hoverLink($c-blue, $c-white);
+    }
+
+    span {
+      padding-left: 5px;
+      padding-right: 5px;
+      @include adaptive(767) {
+        display: none;
+      }
+    }
+  }
+}
 
 // FOOTER :: END

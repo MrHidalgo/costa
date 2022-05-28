@@ -1,24 +1,45 @@
 /// ADDITIONALLY
 /// ===============
-$maxWidth: null;
-$paddingLeft: 15px;
+$maxWidth: 1700px;
+$paddingLeft: 30px;
 $paddingRight: $paddingLeft;
+
+
+@mixin indents($adVal, $val1, $val2) {
+  @include adaptive($adVal) {
+    padding-left: $val1;
+    padding-right: $val2;
+  }
+}
 
 /// MAIN
 /// ===============
 .c-grid {
   @extend %grid;
+
   @if($maxWidth) {
     max-width: $maxWidth;
+
   }
+
   padding-right: $paddingRight;
   padding-left: $paddingLeft;
 
+  @include indents(1439, 20px, 20px);
+  @include indents(1024, 15px, 15px);
+  @include indents(767, 10px, 10px);
+
+
   &-fluid {
     @extend %grid;
+
     max-width: 100%;
     padding-right: $paddingRight;
     padding-left: $paddingLeft;
+
+    @include indents(1439, 20px, 20px);
+    @include indents(1024, 15px, 15px);
+    @include indents(767, 10px, 10px);
   }
 }
 

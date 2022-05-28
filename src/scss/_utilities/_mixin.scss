@@ -2,7 +2,30 @@
 /// @group  Mixin
 ////
 
-/// 
+
+@mixin hoverLink($hoverColor, $mainColor) {
+  position: relative;
+  color: $hoverColor;
+
+  &:before {
+    content: attr(data-hover);
+    position: absolute;
+    color: $mainColor;
+    transform-origin: center;
+    @include transition(opacity 0.1s, transform 0.1s);
+  }
+
+  &:hover {
+    &:before {
+      opacity: 0;
+      transform: scale(0.9);
+      @include transition(opacity, transform);
+    }
+  }
+}
+
+
+///
 /// Mixin setting the width and height element.
 ///
 /// @name   mixinDimensions

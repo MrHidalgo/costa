@@ -15,7 +15,9 @@ $object: (
     success               : #00c851,
     info                  : #33b5e5,
     warning               : #ff8800,
-    danger                : #cc0000
+    danger                : #cc0000,
+
+    blue : #00529F
   ),
 );
 
@@ -31,5 +33,8 @@ $c-info                   : return-value(colors, info);
 $c-warning                : return-value(colors, warning);
 $c-danger                 : return-value(colors, danger);
 
+
 /// ADDITIONAL PALLET
+$c-blue : return-value(colors, blue);
+
 /// ===============
