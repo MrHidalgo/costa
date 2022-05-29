@@ -3,7 +3,8 @@
 .main {
 	position: relative;
 
-  &.main--home {
+  &.main--home,
+  &.main--contacts {
     .main {
       &__bg {
         &:after {

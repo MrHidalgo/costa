@@ -1,0 +1,60 @@
+// SECTION :: START
+
+.address {
+  padding-bottom: 50px;
+
+  &__wrapper {
+    display: flex;
+
+    &-left,
+    &-right {
+      position: relative;
+      width: 50%;
+      height: 650px;
+
+      img {
+        @extend %imageResCoverAbs;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 1090px;
+    padding: 35px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('../img/pattern-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    > div {
+      &:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 30px;
+          color: #fff;
+        }
+
+        .c-btn {
+          border-color: transparent;
+        }
+      }
+    }
+
+    .c-title {
+      text-transform: unset;
+    }
+  }
+}
+
+// SECTION :: END
