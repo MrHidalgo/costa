@@ -25,8 +25,8 @@ $paddingRight: $paddingLeft;
   padding-right: $paddingRight;
   padding-left: $paddingLeft;
 
-  @include indents(1439, 20px, 20px);
-  @include indents(1024, 15px, 15px);
+  @include indents(1535, 20px, 20px);
+  @include indents(1279, 15px, 15px);
   @include indents(767, 10px, 10px);
 
 
@@ -37,8 +37,8 @@ $paddingRight: $paddingLeft;
     padding-right: $paddingRight;
     padding-left: $paddingLeft;
 
-    @include indents(1439, 20px, 20px);
-    @include indents(1024, 15px, 15px);
+    @include indents(1535, 20px, 20px);
+    @include indents(1279, 15px, 15px);
     @include indents(767, 10px, 10px);
   }
 }

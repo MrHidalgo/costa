@@ -138,11 +138,14 @@
 			max-height: 100%;
 			padding-top: 70px;
 			padding-bottom: 85px;
+      @include adaptive(767) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
 
 			> div {
 				&:nth-of-type(1) {
 					width: 100%;
-					//max-width: 415px;
 					border-right: 2px solid #3962AA;
 					@include fluid(max-width, 320px, 1920px, 300px, 415px);
 					@include adaptive(767) {
@@ -244,6 +247,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include adaptive(767) {
+      margin-left: auto;
+      transform: translate(-6px, 11px);
+    }
 
     .icon-font {
       font-size: 33px;
@@ -263,7 +270,6 @@
 		width: 100%;
 		text-transform: uppercase;
 		@extend %fontsMinerva;
-		//font-size: 50px;
 		text-align: left;
 		color: #fff;
 		@include transition(color);
@@ -318,38 +324,10 @@
 		position: relative;
 		display: flex;
 		font-weight: 300;
-		//font-size: 25px;
-		//line-height: 55px;
 		text-align: left;
 		color: #fff;
 		@include fluid(font-size, 320px, 1920px, 18px, 21px);
 		@include fluid(line-height, 320px, 1920px, 40px, 50px);
-
-		//&:before,
-		//&:after {
-		//	content: '';
-		//	position: absolute;
-		//	top: 100%;
-		//	width: 0;
-		//	height: 1px;
-		//	background-color: #fff;
-		//	@include transition(width);
-		//}
-    //
-		//&:before {
-		//	left: 50%;
-		//}
-		//&:after {
-		//	right: 50%;
-		//}
-
-		//&:hover {
-		//	&:before,
-		//	&:after {
-		//		width: 50%;
-		//		@include transition(width);
-		//	}
-		//}
 
 		&-wrapper {
 			display: flex;
@@ -364,8 +342,7 @@
 		}
 	}
 
-	.header__address,
-	.header__request {
+	.header__address {
 		@include adaptive(1023) {
 			display: flex;
 		}

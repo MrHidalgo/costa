@@ -52,7 +52,7 @@
     padding-bottom: 25px;
     @include transition(padding-top);
     @include adaptive(1279) {
-      padding-top: 50px;
+      padding-top: 40px;
     }
     @include adaptive(767) {
       padding-top: 25px;
@@ -161,7 +161,6 @@
       padding-right: 20px;
       @extend %fontsMinerva;
       font-size: 18px;
-      line-height: 90px;
       color: #fff;
       text-transform: uppercase;
       @include adaptive(767) {
@@ -171,6 +170,9 @@
 
     .hamburger {
       border: 1px solid #3b3b3b;
+      @include adaptive(767) {
+        padding: 10px;
+      }
     }
   }
 }

@@ -2,6 +2,7 @@ const HamburgerMenu = (function() {
   const init = function() {
 
     const btn = document.querySelector("[hamburger-js]"),
+      btnClose = document.querySelector('.menu__close'),
       hideScrollContainer = document.querySelectorAll("html, body"),
       mobileContainer = document.querySelector("[mobile-block-js]");
 
@@ -19,6 +20,20 @@ const HamburgerMenu = (function() {
       });
 
     });
+
+    btnClose.addEventListener('click', (ev) => {
+
+      btn.classList.remove("is-active");
+      mobileContainer.classList.remove("is-open");
+      mobileContainer.classList.add("is-animated");
+
+      hideScrollContainer.forEach((val, idx) => {
+        val.classList.remove("is-hideScroll");
+      });
+
+      setTimeout(() => mobileContainer.classList.remove("is-animated"), 300);
+
+    }, false);
 
   };
   return {

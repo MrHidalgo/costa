@@ -1,0 +1,173 @@
+// SECTION :: START
+
+.main {
+	position: relative;
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+    &-logo {
+      position: absolute;
+      width: 100%;
+      max-width: 584px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+		img {
+			@extend %imageResCoverAbs;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+      background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 50.74%, #000 100%);
+    }
+	}
+
+	&__wrapper {
+		z-index: 2;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100vh;
+    padding: 160px 30px;
+    @include adaptive(1535) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include adaptive(1279) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include adaptive(767) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+	}
+
+	&__content {
+		width: 100%;
+	}
+
+	&__title {
+		@extend %fontsMinerva;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: $c-white;
+    text-transform: uppercase;
+    @include fluid(font-size, 320px, 1800px, 35px, 100px);
+		@include fluid(line-height, 320px, 1800px, 45px, 90px);
+	}
+
+	&__breadcrumbs {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		a,
+		p {
+			display: flex;
+			padding-left: 2px;
+			padding-right: 2px;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			text-align: center;
+		}
+
+		a {
+			color: #ffffff;
+			@include transition(color);
+
+			&:hover {
+				color: #c39d48;
+				@include transition(color);
+			}
+
+			&:nth-of-type(2n) {
+				pointer-events: none;
+			}
+		}
+
+		p {
+			color: #c39d48;
+		}
+	}
+
+  &__action {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 45px;
+    @include adaptive(1023) {
+      justify-content: space-between;
+    }
+    @include adaptive(767) {
+      flex-direction: column;
+      padding-bottom: 10px;
+    }
+
+    > div {
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        width: 100%;
+        max-width: 320px;
+        @include adaptive(767) {
+          max-width: 100%;
+
+          .c-btn {
+            width: 100%;
+
+            &__wrapper {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        min-width: 1px;
+        max-width: 100%;
+        @include adaptive(1023) {
+          display: none;
+        }
+
+        img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      &:nth-of-type(3) {
+        display: flex;
+        justify-content: flex-end;
+        @include adaptive(767) {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END

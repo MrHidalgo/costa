@@ -17,6 +17,9 @@
   box-shadow: none;
   background: transparent;
   @include transition(border-color);
+  @include adaptive(1023) {
+    height: 55px;
+  }
 
   &:before {
     content: '';
@@ -62,6 +65,10 @@
       height: calc(100% - 40px);
       transform: translateY(-50%);
       background-color: $c-blue;
+      @include adaptive(1023) {
+        height: calc(100% - 30px);
+
+      }
     }
 
     &:before {
@@ -80,6 +87,9 @@
     text-align: center;
     color: #fff;
     text-transform: uppercase;
+    @include adaptive(1023) {
+      font-size: 18px;
+    }
   }
 
   &__wrapper {

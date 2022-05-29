@@ -60,6 +60,7 @@ __webpack_require__.r(__webpack_exports__);
 var HamburgerMenu = function () {
   var init = function init() {
     var btn = document.querySelector("[hamburger-js]"),
+        btnClose = document.querySelector('.menu__close'),
         hideScrollContainer = document.querySelectorAll("html, body"),
         mobileContainer = document.querySelector("[mobile-block-js]");
     /**
@@ -74,6 +75,17 @@ var HamburgerMenu = function () {
         val.classList.toggle("is-hideScroll");
       });
     });
+    btnClose.addEventListener('click', function (ev) {
+      btn.classList.remove("is-active");
+      mobileContainer.classList.remove("is-open");
+      mobileContainer.classList.add("is-animated");
+      hideScrollContainer.forEach(function (val, idx) {
+        val.classList.remove("is-hideScroll");
+      });
+      setTimeout(function () {
+        return mobileContainer.classList.remove("is-animated");
+      }, 300);
+    }, false);
   };
 
   return {

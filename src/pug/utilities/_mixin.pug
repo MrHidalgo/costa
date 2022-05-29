@@ -4,4 +4,42 @@ include ./_mixin/_hamburger
 include ./_mixin/_swiper
 include ./_mixin/_modal
 
+mixin mainSection(classMod, img, title, breadcrumbsArr)
+  main#main.main(class!="main--" + classMod)
+    .main__bg
+      img(src!="img/" + img + ".jpg" srcset="img/" + img + "@2x.jpg 2x" alt="")
+
+    .c-grid
+      .main__wrapper
+
+        if(classMod === 'home')
+          img.main__bg-logo(src="img/img-logo-manu.svg" alt="")
+          h1.main__title!= title
+        else
+          .main__content
+            h1.main__title!= title
+            .main__breadcrumbs
+              each val, idx in breadcrumbsArr
+                if(idx === breadcrumbsArr.length - 1)
+                  p!= val
+                else
+                  a(href="#")!= val
+
+        .main__action
+          div
+            .c-btn__wrapper
+              a.c-btn(href="#")
+                i
+                span VIRTUAL CONSULTATION
+          div
+
+            img(src="img/best-badge.svg" alt="")
+
+          div
+
+            .c-btn__wrapper
+              a.c-btn(href="#")
+                i
+                span VIEW GALLERY
+
 //- MIXIN :: END
