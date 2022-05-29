@@ -4,6 +4,13 @@
   position: relative;
   padding-top: 40px;
   padding-bottom: 140px;
+  @include adaptive(1279) {
+    padding-bottom: 100px;
+  }
+  @include adaptive(767) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   &__bg {
     position: absolute;
@@ -31,10 +38,24 @@
     position: relative;
     padding-top: 152px;
     padding-bottom: 84px;
+    @include adaptive(1279) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @include adaptive(767) {
+      padding-top: 0;
+      padding-bottom: 50px;
+    }
   }
 
   &__header {
     padding-bottom: 100px;
+    @include adaptive(1439) {
+      padding-bottom: 75px;
+    }
+    @include adaptive(767) {
+      padding-bottom: 40px;
+    }
   }
 
   &__carousel {
@@ -51,6 +72,18 @@
           text-align: center;
           color: #000;
           @extend %fontsMinerva;
+          @include adaptive(1535) {
+            font-size: 40px;
+            line-height: 60px;
+          }
+          @include adaptive(1279) {
+            font-size: 35px;
+            line-height: 55px;
+          }
+          @include adaptive(767) {
+            font-size: 25px;
+            line-height: 35px;
+          }
         }
       }
 
@@ -60,6 +93,12 @@
         align-items: center;
         justify-content: center;
         padding-top: 85px;
+        @include adaptive(1023) {
+          padding-top: 50px;
+        }
+        @include adaptive(767) {
+          padding-top: 40px;
+        }
 
         &-bullet {
           opacity: 1;
@@ -69,6 +108,12 @@
           margin-right: 12px !important;
           background-color: #d2dee6;
           @include transition(background-color);
+          @include adaptive(767) {
+            width: 15px;
+            height: 15px;
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+          }
 
           &-active {
             background-color: $c-blue;

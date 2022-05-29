@@ -7,6 +7,12 @@
   line-height: 25px;
   color: #000;
   text-transform: uppercase;
+  @include adaptive(1439) {
+    font-size: 16px;
+  }
+  @include adaptive(767) {
+    font-size: 14px;
+  }
 
   &--center {
     text-align: center;

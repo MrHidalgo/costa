@@ -7,6 +7,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include adaptive(1535) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  @include adaptive(1279) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
   &__wrapper {
     width: 100%;
@@ -15,10 +23,20 @@
     margin-right: auto;
     padding: 40px 80px;
     background-color: rgba($c-white, 0.7);
+    @include adaptive(1279) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include adaptive(767) {
+      padding: 50px 10px;
+    }
   }
 
   &__header {
     padding-bottom: 50px;
+    @include adaptive(767) {
+      padding-bottom: 40px;
+    }
   }
 
   &__box {
@@ -38,19 +56,45 @@
       @extend %fontsMinerva;
       font-size: 20px;
       color: #252425;
+      @include adaptive(767) {
+        font-size: 18px;
+      }
     }
 
     &-wrapper {
       position: relative;
       left: -130px;
       display: flex;
+      flex-wrap: wrap;
       width: calc(100% + 130px);
       padding-bottom: 50px;
+      @include adaptive(1279) {
+        left: -65px;
+        width: calc(100% + 65px);
+      }
+      @include adaptive(767) {
+        padding-bottom: 20px;
+      }
 
       > div {
         width: 100%;
         max-width: calc(100% / 2);
         padding-left: 130px;
+        @include adaptive(1279) {
+          padding-left: 65px;
+        }
+        @include adaptive(1023) {
+          max-width: 100%;
+
+          & + div {
+            padding-top: 50px;
+          }
+        }
+        @include adaptive(767) {
+          & + div {
+            padding-top: 20px;
+          }
+        }
       }
     }
 
@@ -59,11 +103,18 @@
       left: -20px;
       display: flex;
       width: calc(100% + 20px);
+      @include adaptive(767) {
+        left: -10px;
+        width: calc(100% + 10px);
+      }
 
       > div {
         width: 100%;
-        max-width: calc(100% + 20px);
+        max-width: calc(100% / 2);
         padding-left: 20px;
+        @include adaptive(767) {
+          padding-left: 10px;
+        }
       }
     }
   }

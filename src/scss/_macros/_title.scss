@@ -5,12 +5,30 @@
   @extend %fontsMinerva;
   font-weight: normal;
   font-size: 70px;
-  line-height: 60px;
+  line-height: 1.2;
   color: $c-blue;
   text-transform: uppercase;
+  @include adaptive(1439) {
+    font-size: 60px;
+  }
+  @include adaptive(1023) {
+    font-size: 50px;
+  }
+  @include adaptive(767) {
+    font-size: 40px;
+  }
 
   &--small {
     font-size: 60px;
+    @include adaptive(1439) {
+      font-size: 50px;
+    }
+    @include adaptive(1023) {
+      font-size: 40px;
+    }
+    @include adaptive(767) {
+      font-size: 30px;
+    }
   }
 
   &--center {
