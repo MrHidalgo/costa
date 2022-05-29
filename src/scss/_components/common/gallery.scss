@@ -1,0 +1,93 @@
+// SECTION :: START
+
+.gallery {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url('../img/pattern-bg-white.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1365px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 80px;
+    background-color: rgba($c-white, 0.7);
+  }
+
+  &__header {
+    padding-bottom: 50px;
+  }
+
+  &__box {
+    position: relative;
+    height: 300px;
+
+    > img {
+      @extend %imageResCoverAbs;
+    }
+
+    > p {
+      z-index: 2;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      text-transform: uppercase;
+      @extend %fontsMinerva;
+      font-size: 20px;
+      color: #252425;
+    }
+
+    &-wrapper {
+      position: relative;
+      left: -130px;
+      display: flex;
+      width: calc(100% + 130px);
+      padding-bottom: 50px;
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 2);
+        padding-left: 130px;
+      }
+    }
+
+    &-row {
+      position: relative;
+      left: -20px;
+      display: flex;
+      width: calc(100% + 20px);
+
+      > div {
+        width: 100%;
+        max-width: calc(100% + 20px);
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &__btn {
+    .c-btn {
+      border-color: transparent;
+
+      &:hover {
+        span {
+          color: #ffffff;
+        }
+      }
+
+      i {
+        &:before,
+        &:after {}
+      }
+
+      span {
+        color: #000000;
+      }
+    }
+  }
+}
+
+// SECTION :: END

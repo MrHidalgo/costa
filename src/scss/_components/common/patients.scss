@@ -1,0 +1,58 @@
+// SECTION :: START
+
+.patients {
+  padding-top: 120px;
+  padding-bottom: 40px;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    &-left {
+      z-index: 2;
+      position: relative;
+      width: 100%;
+      max-width: 812px;
+      padding: 75px;
+      background-image: url('../img/pattern-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-right {
+      position: relative;
+      margin-top: 200px;
+      margin-left: -200px;
+      width: calc(100% + 200px);
+      height: 580px;
+
+      img {
+        @extend %imageResCoverAbs;
+      }
+    }
+  }
+
+  &__header {
+    padding-bottom: 50px;
+  }
+
+  &__desc {
+    padding-bottom: 40px;
+  }
+
+  &__btn {
+    .c-btn {
+      border-color: transparent;
+
+      i {
+        &:before,
+        &:after {
+          background-color: $c-white;
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END

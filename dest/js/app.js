@@ -160,6 +160,37 @@ var MenuToggle = function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (MenuToggle);
 
+/***/ }),
+
+/***/ "./src/js/macros/reviewsCarousel.js":
+/*!******************************************!*\
+  !*** ./src/js/macros/reviewsCarousel.js ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var ReviewsCarousel = function () {
+  var init = function init() {
+    new Swiper('.reviews__carousel .swiper', {
+      loop: false,
+      speed: 1250,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '.reviews__carousel .swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ReviewsCarousel);
+
 /***/ })
 
 /******/ 	});
@@ -212,6 +243,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_headerFixed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/headerFixed */ "./src/js/macros/headerFixed.js");
 /* harmony import */ var _macros_hamburgerMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/hamburgerMenu */ "./src/js/macros/hamburgerMenu.js");
 /* harmony import */ var _macros_menuToggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/menuToggle */ "./src/js/macros/menuToggle.js");
+/* harmony import */ var _macros_reviewsCarousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/reviewsCarousel */ "./src/js/macros/reviewsCarousel.js");
+
 
 
 
@@ -225,6 +258,7 @@ window.addEventListener('load', function (ev) {
   _macros_headerFixed__WEBPACK_IMPORTED_MODULE_1__["default"].init();
   _macros_hamburgerMenu__WEBPACK_IMPORTED_MODULE_2__["default"].init();
   _macros_menuToggle__WEBPACK_IMPORTED_MODULE_3__["default"].init();
+  _macros_reviewsCarousel__WEBPACK_IMPORTED_MODULE_4__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

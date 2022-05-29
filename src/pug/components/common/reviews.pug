@@ -1,0 +1,27 @@
+// SECTION :: START
+
+section#reviews.reviews
+
+  .reviews__bg
+    img(src="img/img-logo-manu.svg" alt="")
+
+  .c-grid
+    .reviews__wrapper
+
+      .reviews__header.c-header.c-header--center
+        div
+          p.c-label PATIENT
+          h2.c-title REVIEWS
+        div
+          span!= "We believe in building lifelong <br>relationships with our patients."
+
+      .reviews__carousel
+        .swiper
+          .swiper-wrapper
+            each val, idx in [1,2,3,4,5]
+              .swiper-slide
+                p!= "“ Dr. Costa and his entire team is and was amazing to me. He did exactly as I asked. He even took my late night phone calls about pain and helped me through it. I would come back to him every time. Thank you guys very much. “"
+
+        .swiper-pagination
+
+// SECTION :: END

@@ -1,0 +1,57 @@
+// SECTION :: START
+
+.schedule {
+  padding-top: 90px;
+  padding-bottom: 110px;
+  background-image: url('../img/img-schedule-bg@2x.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 812px;
+    padding: 60px 112px 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba($c-white, 0.9);
+  }
+
+  &__slogan {
+    padding-bottom: 110px;
+    @extend %fontsMinerva;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color: #252425;
+  }
+
+  &__btn {
+    flex-direction: column;
+    align-items: center;
+
+    .c-btn {
+      &:hover {
+        span {
+          color: $c-white;
+        }
+      }
+
+      span {
+        color: #252425;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(50%);
+  }
+}
+
+// SECTION :: END

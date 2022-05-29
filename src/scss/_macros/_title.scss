@@ -1,12 +1,24 @@
 // TITLE :: START
 
 .c-title {
-  &__text {
-    &-wrap {}
+  padding-bottom: 20px;
+  @extend %fontsMinerva;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 60px;
+  color: $c-blue;
+  text-transform: uppercase;
+
+  &--small {
+    font-size: 60px;
   }
 
-  &__icon {
-    &-wrap {}
+  &--center {
+    text-align: center;
+  }
+
+  &--white {
+    color: $c-white;
   }
 }
 

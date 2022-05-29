@@ -1,0 +1,20 @@
+// LABEL :: START
+
+.c-label {
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+  color: #000;
+  text-transform: uppercase;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--white {
+    color: $c-white;
+  }
+}
+
+// LABEL :: END

@@ -36,8 +36,20 @@
 	@if $filename == facebook {
 		$char: "\E003";
 	}
-	@if $filename == instagram {
+	@if $filename == google {
 		$char: "\E004";
+	}
+	@if $filename == heart-logo {
+		$char: "\E005";
+	}
+	@if $filename == instagram {
+		$char: "\E006";
+	}
+	@if $filename == is {
+		$char: "\E007";
+	}
+	@if $filename == star-logo {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -66,7 +78,23 @@
 	@include icon(facebook);
 
 }
+.icon-google {
+	@include icon(google);
+
+}
+.icon-heart-logo {
+	@include icon(heart-logo);
+
+}
 .icon-instagram {
 	@include icon(instagram);
+
+}
+.icon-is {
+	@include icon(is);
+
+}
+.icon-star-logo {
+	@include icon(star-logo);
 
 }
