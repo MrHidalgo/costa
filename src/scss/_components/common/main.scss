@@ -3,6 +3,16 @@
 .main {
 	position: relative;
 
+  &.main--home {
+    .main {
+      &__bg {
+        &:after {
+          background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 50.74%, #000 100%);
+        }
+      }
+    }
+  }
+
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -30,7 +40,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-      background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 50.74%, #000 100%);
+      background-color: rgba($c-black, 0.75);
     }
 	}
 
@@ -83,16 +93,20 @@
 			padding-left: 2px;
 			padding-right: 2px;
 			text-transform: uppercase;
-			letter-spacing: 0.1em;
-			text-align: center;
-		}
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      line-height: 38px;
+      text-align: center;
+      color: $c-blue;
+    }
 
 		a {
 			color: #ffffff;
 			@include transition(color);
+      @include hoverLink($c-blue, $c-white);
 
 			&:hover {
-				color: #c39d48;
+        color: $c-blue;
 				@include transition(color);
 			}
 
@@ -102,7 +116,8 @@
 		}
 
 		p {
-			color: #c39d48;
+      color: $c-blue;
+      font-weight: bold;
 		}
 	}
 

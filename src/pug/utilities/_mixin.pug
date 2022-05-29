@@ -23,7 +23,7 @@ mixin mainSection(classMod, img, title, breadcrumbsArr)
                 if(idx === breadcrumbsArr.length - 1)
                   p!= val
                 else
-                  a(href="#")!= val
+                  a(href="#" data-hover!= val)!= val
 
         .main__action
           div
