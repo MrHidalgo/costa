@@ -1,0 +1,57 @@
+// SECTION :: START
+
+.leave {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  &__desc {
+    width: 100%;
+    max-width: 675px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 225px;
+    background-image: url('../img/pattern-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .icon-font {
+      height: 40px;
+      color: #ffffff;
+      font-size: 40px;
+    }
+
+    > p {
+      padding-top: 45px;
+      @extend %fontsMinerva;
+      font-size: 30px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: #fff;
+    }
+
+    &-wrapper {
+      position: relative;
+      left: -20px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 20px);
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 5);
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+// SECTION :: END

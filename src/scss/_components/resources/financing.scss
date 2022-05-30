@@ -1,0 +1,75 @@
+// SECTION :: START
+
+.financing {
+  padding-top: 100px;
+  padding-bottom: 75px;
+
+  &__desc {
+    width: 100%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    padding: 55px 40px 20px;
+    background-image: url('../img/pattern-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &-head {
+      height: 45px;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &-body {
+      flex: 1;
+      min-height: 1px;
+      max-height: 100%;
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+
+    &-footer {
+      .c-btn {
+        border-color: transparent;
+
+        i {
+          &:before,
+          &:after {
+            background-color: $c-white;
+          }
+        }
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+      left: -20px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 20px);
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 2);
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+// SECTION :: END
