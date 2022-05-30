@@ -2,6 +2,9 @@
 
 .address {
   padding-bottom: 50px;
+  @include adaptive(767) {
+    padding-bottom: 0;
+  }
 
   &__wrapper {
     display: flex;
@@ -11,9 +14,25 @@
       position: relative;
       width: 50%;
       height: 650px;
+      @include adaptive(1535) {
+        height: 600px;
+      }
+      @include adaptive(1439) {
+        height: 550px;
+      }
+      @include adaptive(767) {
+        width: 100%;
+        height: 350px;
+      }
 
       img {
         @extend %imageResCoverAbs;
+      }
+    }
+
+    &-left {
+      @include adaptive(767) {
+        display: none;
       }
     }
   }
@@ -31,22 +50,41 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @include adaptive(1279) {
+      padding: 25px;
+    }
 
     > div {
       &:nth-of-type(2) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include adaptive(767) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
         p {
           font-weight: 300;
           font-size: 20px;
           line-height: 30px;
           color: #fff;
+          @include adaptive(767) {
+            padding-bottom: 30px;
+            font-size: 16px;
+            line-height: 25px;
+          }
         }
 
         .c-btn {
           border-color: transparent;
+
+          &__wrapper {
+            @include adaptive(767) {
+              justify-content: center;
+              width: 100%;
+            }
+          }
         }
       }
     }
