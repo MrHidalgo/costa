@@ -9,6 +9,15 @@
 
     &-1 {
       margin-bottom: 255px;
+      @include adaptive(1439) {
+        margin-bottom: 200px;
+      }
+      @include adaptive(1279) {
+        margin-bottom: 175px;
+      }
+      @include adaptive(767) {
+        margin-bottom: 50px;
+      }
 
       .consult__wrapper {
         &-left {
@@ -42,6 +51,18 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      @include adaptive(1439) {
+        max-width: 700px;
+        padding: 40px 60px 20px;
+      }
+      @include adaptive(1023) {
+        max-width: 600px;
+      }
+      @include adaptive(767) {
+        position: relative;
+        transform: unset;
+        padding: 30px 20px 20px;
+      }
 
       .c-desc {
         padding-top: 25px;

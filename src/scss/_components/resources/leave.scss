@@ -3,6 +3,10 @@
 .leave {
   padding-top: 75px;
   padding-bottom: 75px;
+  @include adaptive(1279) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   &__desc {
     width: 100%;
@@ -36,6 +40,9 @@
       letter-spacing: 0.02em;
       text-align: center;
       color: #fff;
+      @include adaptive(1439) {
+        font-size: 26px;
+      }
     }
 
     &-wrapper {
@@ -44,11 +51,21 @@
       display: flex;
       flex-wrap: wrap;
       width: calc(100% + 20px);
+      @include adaptive(1279) {
+        justify-content: center;
+      }
 
       > div {
         width: 100%;
         max-width: calc(100% / 5);
         padding-left: 20px;
+        @include adaptive(1279) {
+          max-width: calc(100% / 3);
+          padding-bottom: 20px;
+        }
+        @include adaptive(767) {
+          max-width: 100%;
+        }
       }
     }
   }

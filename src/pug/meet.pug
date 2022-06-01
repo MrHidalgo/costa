@@ -1,0 +1,16 @@
+---
+title: Dr.Costa | Meet
+
+pageClassName: p-meet
+---
+extends shared/_layout
+
+block content
+  main.main(class!= pageClassName)
+
+    +mainSection('meet', 'img-main--meet', 'CHRISTOPHER COSTA, MD', ["HOME", "|", "ABOUT", "|", "MEET THE DOCTOR"])
+
+    include components/common/patients
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/patient-resources

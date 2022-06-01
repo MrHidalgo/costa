@@ -1,9 +1,10 @@
 import Common from "./common/common";
+
 import HeaderFixed from "./macros/headerFixed";
 import HamburgerMenu from "./macros/hamburgerMenu";
 import MenuToggle from "./macros/menuToggle";
-import ReviewsCarousel
-  from "./macros/reviewsCarousel";
+import ReviewsCarousel from "./macros/reviewsCarousel";
+import Portfolio from "./macros/portfolio";
 
 
 // EVENT LISTENER - LOAD
@@ -18,6 +19,7 @@ window.addEventListener('load', (ev) => {
   HamburgerMenu.init();
   MenuToggle.init();
   ReviewsCarousel.init();
+  Portfolio.init();
 
 }, false);
 

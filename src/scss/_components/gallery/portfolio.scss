@@ -1,0 +1,90 @@
+// SECTION :: START
+
+.portfolio {
+  padding-top: 150px;
+  @include adaptive(1439) {
+    padding-top: 100px;
+  }
+  @include adaptive(1023) {
+    padding-top: 50px;
+  }
+
+  &__label,
+  &__title {
+    text-align: left;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+    @include adaptive(767) {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__carousel {
+    padding-bottom: 200px;
+    @include adaptive(1439) {
+      padding-bottom: 150px;
+    }
+    @include adaptive(1279) {
+      padding-bottom: 100px;
+    }
+    @include adaptive(767) {
+      padding-bottom: 50px;
+    }
+
+    .swiper {
+      opacity: 0;
+
+      &-slide {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        width: 535px !important;
+        height: 590px;
+        padding: 50px;
+        @include adaptive(1535) {
+          width: 475px !important;
+          height: 500px;
+        }
+        @include adaptive(1365) {
+          width: 400px !important;
+          height: 450px;
+          padding: 40px;
+        }
+        @include adaptive(1023) {
+          width: 325px !important;
+          height: 400px;
+          padding: 30px;
+        }
+        @include adaptive(767) {
+          width: 290px !important;
+          height: 350px;
+          padding: 20px;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(#000, 0.5);
+        }
+
+        > img {
+          z-index: 0;
+          @extend %imageResCoverAbs;
+        }
+
+        p {
+          z-index: 2;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END
