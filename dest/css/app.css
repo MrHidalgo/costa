@@ -16,7 +16,7 @@
      object-position: center;
 }
 
-.leave__box > p, .portfolio__carousel .swiper-slide p, .schedule__slogan, .reviews__carousel .swiper-slide p, .gallery__box > p, .main__title, .menu__btn, .header__hamburger > p, .header__address a,
+.leave__box > p, .portfolio__carousel .swiper-slide p, .procedures__block p, .schedule__slogan, .reviews__carousel .swiper-slide p, .gallery__box > p, .main__title, .menu__btn, .header__hamburger > p, .header__address a,
 .header__address p, .c-btn span, .c-title, .c-header span {
   font-family: "minerva-modern", sans-serif;
 }
@@ -2712,6 +2712,159 @@ picture {
 @media screen and (max-width: 1279px) {
   .patient-resources__box-wrapper > div {
     max-width: 100%;
+  }
+}
+
+.procedures {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 1023px) {
+  .procedures {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .procedures {
+    padding-bottom: 0;
+  }
+}
+.procedures__content {
+  position: relative;
+}
+.procedures__content-visual {
+  z-index: -1;
+  opacity: 0.05;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1023px) {
+  .procedures__content-visual {
+    top: -50px;
+  }
+}
+.procedures__heading {
+  padding-bottom: 50px;
+}
+.procedures__desc {
+  width: 100%;
+  max-width: 812px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 150px;
+}
+@media screen and (max-width: 1439px) {
+  .procedures__desc {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .procedures__desc {
+    padding-bottom: 50px;
+  }
+}
+.procedures__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 150px;
+}
+@media screen and (max-width: 1535px) {
+  .procedures__box {
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .procedures__box {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+.procedures__box-header {
+  padding-bottom: 50px;
+}
+.procedures__box-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.procedures__box-wrapper > div {
+  padding-bottom: 200px;
+}
+@media screen and (max-width: 1535px) {
+  .procedures__box-wrapper > div {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .procedures__box-wrapper > div {
+    padding-bottom: 100px;
+  }
+}
+.procedures__block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 155px;
+  padding: 20px;
+  background-image: url("../img/pattern-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.procedures__block:before {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  max-width: 112px;
+  height: 100%;
+  max-height: 120px;
+  background-image: url("../img/img-logo-manu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.procedures__block p {
+  z-index: 2;
+  position: relative;
+  font-size: 25px;
+  line-height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.procedures__block-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+@media screen and (max-width: 1365px) {
+  .procedures__block-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .procedures__block-wrapper {
+    grid-template-columns: 1fr;
   }
 }
 

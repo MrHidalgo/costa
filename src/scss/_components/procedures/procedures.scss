@@ -1,0 +1,136 @@
+// SECTION :: START
+
+.procedures {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  @include adaptive(1023) {
+    padding-top: 100px;
+  }
+  @include adaptive(767) {
+    padding-bottom: 0;
+  }
+
+  &__content {
+    position: relative;
+
+    &-visual {
+      z-index: -1;
+      opacity: 0.05;
+      position: absolute;
+      top: -100px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      @include adaptive(1023) {
+        top: -50px;
+      }
+    }
+  }
+
+  &__heading {
+    padding-bottom: 50px;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 812px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 150px;
+    @include adaptive(1439) {
+      padding-bottom: 100px;
+    }
+    @include adaptive(767) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    @include adaptive(1535) {
+      gap: 100px;
+    }
+    @include adaptive(1279) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    &-header {
+      padding-bottom: 50px;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      > div {
+        padding-bottom: 200px;
+        @include adaptive(1535) {
+          padding-bottom: 150px;
+        }
+        @include adaptive(767) {
+          padding-bottom: 100px;
+        }
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    height: 155px;
+    padding: 20px;
+    background-image: url('../img/pattern-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &:before {
+      content: '';
+      z-index: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 100%;
+      max-width: 112px;
+      height: 100%;
+      max-height: 120px;
+      background-image: url('../img/img-logo-manu.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    p {
+      z-index: 2;
+      position: relative;
+      @extend %fontsMinerva;
+      font-size: 25px;
+      line-height: 30px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      @include adaptive(1365) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include adaptive(767) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+// SECTION :: END
