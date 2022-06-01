@@ -4,29 +4,33 @@ section#portfolio.portfolio
   .c-grid
     .portfolio__wrapper
 
-      p.portfolio__label.c-label.wow.animate__animated.animate__fadeInUp BEFORE & AFTERS
-      h3.portfolio__title.c-title.c-title--big.wow.animate__animated.animate__fadeInUp FACE
+      .portfolio__content
+        img.portfolio__content-visual(src="img/icon-schedule.svg" alt="")
+        h2.portfolio__heading.c-title.c-title--center!= "Create the body <br>you imagine."
+        p.portfolio__desc.c-desc.c-desc--center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum sed nunc a ultrices. Mauris porttitor diam quis risus porta, vel viverra enim accumsan. Maecenas dignissim enim eget ante lobortis ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fermentum tempor mauris ut elementum. Sed at arcu in libero ullamcorper malesuada nec vel augue. Cras dapibus urna suscipit elit facilisis lacinia. Integer at ipsum varius, dictum sem nec, tempor arcu.
 
+      p.portfolio__label.c-label.wow.animate__animated.animate__fadeInUp BEFORE & AFTERS
+      h3.portfolio__title.c-title.c-title--big.wow.animate__animated.animate__fadeInUp NOSE
       .portfolio__carousel.portfolio__carousel-1.wow.animate__animated.animate__fadeInUp
         .swiper.portfolioSwiper1
           .swiper-wrapper
             each val, idx in [1,2,3,4,5]
               .swiper-slide
-                img(src="img/img-portfolio-face-1.jpg" srcset="img/img-portfolio-face-1@2x.jpg 2x" alt="")
-                p.c-title.c-title--medium.c-title--white FACELIFT
+                img(src="img/img-portfolio-nose-1.jpg" srcset="img/img-portfolio-nose-1@2x.jpg 2x" alt="")
+                p.c-title--white RHINOPLASTY
               .swiper-slide
-                img(src="img/img-portfolio-face-2.jpg" srcset="img/img-portfolio-face-2@2x.jpg 2x" alt="")
-                p.c-title.c-title--medium.c-title--white Browlift
+                img(src="img/img-portfolio-nose-2.jpg" srcset="img/img-portfolio-nose-2@2x.jpg 2x" alt="")
+                p.c-title--white ASIAN RHINOPLASTY
               .swiper-slide
-                img(src="img/img-portfolio-face-3.jpg" srcset="img/img-portfolio-face-3@2x.jpg 2x" alt="")
-                p.c-title.c-title--medium.c-title--white Lip Lift
+                img(src="img/img-portfolio-nose-3.jpg" srcset="img/img-portfolio-nose-3@2x.jpg 2x" alt="")
+                p.c-title--white ETHNIC RHINOPLASTY
               .swiper-slide
-                img(src="img/img-portfolio-face-4.jpg" srcset="img/img-portfolio-face-4@2x.jpg 2x" alt="")
-                p.c-title.c-title--medium.c-title--white Otoplasty
+                img(src="img/img-portfolio-nose-4.jpg" srcset="img/img-portfolio-nose-4@2x.jpg 2x" alt="")
+                p.c-title--white MALE RHINOPLASTY
+
 
       p.portfolio__label.c-label.wow.animate__animated.animate__fadeInUp BEFORE & AFTERS
       h3.portfolio__title.c-title.c-title--big.wow.animate__animated.animate__fadeInUp BREAST
-
       .portfolio__carousel.portfolio__carousel-2.wow.animate__animated.animate__fadeInUp
         .swiper.portfolioSwiper2
           .swiper-wrapper
@@ -44,9 +48,9 @@ section#portfolio.portfolio
                 img(src="img/img-portfolio-breast-4.jpg" srcset="img/img-portfolio-breast-4@2x.jpg 2x" alt="")
                 p.c-title.c-title--medium.c-title--white
 
+
       p.portfolio__label.c-label.wow.animate__animated.animate__fadeInUp BEFORE & AFTERS
       h3.portfolio__title.c-title.c-title--big.wow.animate__animated.animate__fadeInUp body
-
       .portfolio__carousel.portfolio__carousel-3.wow.animate__animated.animate__fadeInUp
         .swiper.portfolioSwiper3
           .swiper-wrapper
@@ -62,6 +66,44 @@ section#portfolio.portfolio
                 p.c-title.c-title--medium.c-title--white
               .swiper-slide
                 img(src="img/img-portfolio-body-4.jpg" srcset="img/img-portfolio-body-4@2x.jpg 2x" alt="")
+                p.c-title.c-title--medium.c-title--white
+
+      p.portfolio__label.c-label.wow.animate__animated.animate__fadeInUp BEFORE & AFTERS
+      h3.portfolio__title.c-title.c-title--big.wow.animate__animated.animate__fadeInUp Face
+      .portfolio__carousel.portfolio__carousel-4.wow.animate__animated.animate__fadeInUp
+        .swiper.portfolioSwiper4
+          .swiper-wrapper
+            each val, idx in [1,2,3,4,5]
+              .swiper-slide
+                img(src="img/img-portfolio-face-1.jpg" srcset="img/img-portfolio-face-1@2x.jpg 2x" alt="")
+                p.c-title.c-title--medium.c-title--white
+              .swiper-slide
+                img(src="img/img-portfolio-face-2.jpg" srcset="img/img-portfolio-face-2@2x.jpg 2x" alt="")
+                p.c-title.c-title--medium.c-title--white
+              .swiper-slide
+                img(src="img/img-portfolio-face-3.jpg" srcset="img/img-portfolio-face-3@2x.jpg 2x" alt="")
+                p.c-title.c-title--medium.c-title--white
+              .swiper-slide
+                img(src="img/img-portfolio-face-4.jpg" srcset="img/img-portfolio-face-4@2x.jpg 2x" alt="")
+                p.c-title.c-title--medium.c-title--white
+
+      p.portfolio__label.c-label.wow.animate__animated.animate__fadeInUp BEFORE & AFTERS
+      h3.portfolio__title.c-title.c-title--big.wow.animate__animated.animate__fadeInUp NON-SURGICAL
+      .portfolio__carousel.portfolio__carousel-5.wow.animate__animated.animate__fadeInUp
+        .swiper.portfolioSwiper5
+          .swiper-wrapper
+            each val, idx in [1,2,3,4,5]
+              .swiper-slide
+                img(src="img/img-portfolio-non-surgical-1.jpg" srcset="img/img-portfolio-non-surgical-1@2x.jpg 2x" alt="")
+                p.c-title.c-title--medium.c-title--white
+              .swiper-slide
+                img(src="img/img-portfolio-non-surgical-2.jpg" srcset="img/img-portfolio-non-surgical-2@2x.jpg 2x" alt="")
+                p.c-title.c-title--medium.c-title--white
+              .swiper-slide
+                img(src="img/img-portfolio-non-surgical-3.jpg" srcset="img/img-portfolio-non-surgical-3@2x.jpg 2x" alt="")
+                p.c-title.c-title--medium.c-title--white
+              .swiper-slide
+                img(src="img/img-portfolio-non-surgical-4.jpg" srcset="img/img-portfolio-non-surgical-4@2x.jpg 2x" alt="")
                 p.c-title.c-title--medium.c-title--white
 
 // SECTION :: END
