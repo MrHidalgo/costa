@@ -1,0 +1,212 @@
+// SECTION :: START
+
+.feature {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  @include adaptive(1279) {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+  @include adaptive(767) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__wrapper {
+    padding-bottom: 150px;
+    @include adaptive(1279) {
+      padding-bottom: 100px;
+    }
+
+    &-1,
+    &-3 {
+      display: grid;
+      grid-template-columns: fit-content(540px) 1fr fit-content(540px);
+      gap: 70px;
+      @include adaptive(1535) {
+        grid-template-columns: fit-content(400px) 1fr fit-content(400px);
+        gap: 50px;
+      }
+      @include adaptive(1365) {
+        grid-template-columns: fit-content(300px) 1fr fit-content(300px);
+        gap: 30px;
+      }
+      @include adaptive(1279) {
+        grid-template-columns: 1fr;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        > div {
+          &:nth-of-type(1) {
+            order: 2;
+            display: none;
+          }
+          &:nth-of-type(2) {
+            order: 1;
+          }
+          &:nth-of-type(3) {
+            order: 3;
+            display: none;
+          }
+        }
+      }
+      @include adaptive(767) {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        > div {
+          &:nth-of-type(1) {
+            display: block;
+          }
+        }
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      > div {
+        &:nth-of-type(2) {
+          img {
+            transform: translateY(-50%);
+            margin-left: auto;
+            margin-right: auto;
+            @include adaptive(1279) {
+              transform: translateY(-25%);
+            }
+          }
+        }
+      }
+
+      .c-btn {
+        &__wrapper {
+          @include adaptive(1535) {
+            flex-direction: column;
+          }
+          @include adaptive(1365) {
+            flex-direction: row;
+          }
+          @include adaptive(767) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    &-2,
+    &-4 {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 150px;
+      @include adaptive(1535) {
+        gap: 100px;
+      }
+      @include adaptive(1365) {
+        gap: 30px;
+      }
+      @include adaptive(1023) {
+        grid-template-columns: 1fr;
+      }
+      @include adaptive(767) {
+        .c-btn {
+          &__wrapper {
+            flex-direction: column;
+          }
+        }
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-5 {
+      position: relative;
+      padding-top: 180px;
+      padding-bottom: 180px;
+      @include adaptive(1535) {
+        padding-top: 125px;
+        padding-bottom: 125px;
+      }
+      @include adaptive(1365) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      @include adaptive(767) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      > img {
+        @extend %imageResCoverAbs;
+      }
+
+      > div {
+        z-index: 2;
+        position: relative;
+        width: 100%;
+        max-width: 815px;
+        padding: 0 50px 50px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(#fff, 0.7);
+        @include adaptive(1023) {
+          padding: 0 20px 20px;
+        }
+
+        > img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          transform: translateY(-50%);
+          margin-left: auto;
+          margin-right: auto;
+          @include adaptive(767) {
+            transform: translateY(-25%);
+          }
+        }
+
+        .c-btn {
+          border-color: transparent;
+
+          &__wrapper {
+            @include adaptive(767) {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    padding-bottom: 50px;
+  }
+
+  &__desc {
+    padding-bottom: 50px;
+  }
+
+  &__btn {
+    justify-content: space-between;
+
+    .c-btn {
+      &:hover {
+        span {
+          color: #ffffff;
+        }
+      }
+
+      span {
+        color: #000000;
+      }
+    }
+  }
+}
+
+// SECTION :: END
