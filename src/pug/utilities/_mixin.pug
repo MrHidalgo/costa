@@ -13,19 +13,19 @@ mixin mainSection(classMod, img, title, breadcrumbsArr)
       .main__wrapper
 
         if(classMod === 'home')
-          img.main__bg-logo(src="img/img-logo-manu.svg" alt="")
-          h1.main__title!= title
+          img.main__bg-logo(src="img/img-logo-manu.svg" alt="" data-aos="fade-up")
+          h1.main__title(data-aos="fade-up")!= title
         else
           .main__content
-            h1.main__title!= title
-            .main__breadcrumbs
+            h1.main__title(data-aos="fade-up")!= title
+            .main__breadcrumbs(data-aos="fade-up")
               each val, idx in breadcrumbsArr
                 if(idx === breadcrumbsArr.length - 1)
                   p!= val
                 else
                   a(href="#" data-hover!= val)!= val
 
-        .main__action
+        .main__action(data-aos="fade-up" data-aos-offset='0')
           div
             .c-btn__wrapper
               a.c-btn(href="#")

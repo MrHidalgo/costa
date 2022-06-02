@@ -23,6 +23,12 @@ window.addEventListener('load', (ev) => {
   Portfolio.init();
   Faq.init();
 
+  /* SCROLL WOW ANIMATION */
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
 }, false);
 
 

@@ -5021,6 +5021,7 @@ picture {
   right: 0;
 }
 .consult__wrapper-left {
+  z-index: 5;
   position: absolute;
   top: 0;
   -webkit-transform: translateY(-60px);

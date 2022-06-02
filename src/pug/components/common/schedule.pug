@@ -4,10 +4,10 @@ section#schedule.schedule
   .c-grid
     .schedule__wrapper
 
-      h2.schedule__title.c-title.c-title--center!= "SCHEDULE A<br>CONSULTATION"
-      h3.schedule__slogan No matter what brought you here, a visit with our doctors will bring out the best in you.
+      h2.schedule__title.c-title.c-title--center(data-aos="fade-up")!= "SCHEDULE A<br>CONSULTATION"
+      h3.schedule__slogan(data-aos="fade-up") No matter what brought you here, a visit with our doctors will bring out the best in you.
 
-      .schedule__btn.c-btn__wrapper
+      .schedule__btn.c-btn__wrapper(data-aos="fade-up")
         a.c-btn(href="#")
           i
           span VIRTUAL CONSULTATION
@@ -15,6 +15,7 @@ section#schedule.schedule
           i
           span IN - PERSON CONSULTATION
 
-      img.schedule__logo(src="img/icon-schedule.svg" alt="")
+      div(data-aos="fade-up")
+        img.schedule__logo(src="img/icon-schedule.svg" alt="")
 
 // SECTION :: END

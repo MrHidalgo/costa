@@ -340,6 +340,12 @@ window.addEventListener('load', function (ev) {
   _macros_reviewsCarousel__WEBPACK_IMPORTED_MODULE_4__["default"].init();
   _macros_portfolio__WEBPACK_IMPORTED_MODULE_5__["default"].init();
   _macros_faq__WEBPACK_IMPORTED_MODULE_6__["default"].init();
+  /* SCROLL WOW ANIMATION */
+
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

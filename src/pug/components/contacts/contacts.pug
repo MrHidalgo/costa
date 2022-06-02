@@ -4,11 +4,11 @@ section#contacts.contacts
   .c-grid
     .contacts__wrapper
 
-      h2.contacts__title.c-title.c-title--small.c-title--center SCHEDULE A CONSULTATION
-      p.contacts__desc.c-desc.c-desc--center Our friendly, highly-trained staff will take care of your scheduling needs and put you in touch with our staff for a consultation that could change your life. Contact us today to schedule your consultation. We offer in-person and virtual appointments to better accommodate your needs. You can also call us at 999.999.9999 to schedule an appointment.
+      h2.contacts__title.c-title.c-title--small.c-title--center(data-aos="fade-up") SCHEDULE A CONSULTATION
+      p.contacts__desc.c-desc.c-desc--center(data-aos="fade-up") Our friendly, highly-trained staff will take care of your scheduling needs and put you in touch with our staff for a consultation that could change your life. Contact us today to schedule your consultation. We offer in-person and virtual appointments to better accommodate your needs. You can also call us at 999.999.9999 to schedule an appointment.
 
       form.contacts__form(action='' method='' autocomplete='off')
-        .contacts__form-group
+        .contacts__form-group(data-aos="fade-up")
           div
             .contacts__form-field
               label
@@ -17,7 +17,7 @@ section#contacts.contacts
             .contacts__form-field
               label
                 input(type='tel' placeholder='Phone*')
-        .contacts__form-group
+        .contacts__form-group(data-aos="fade-up")
           div
             .contacts__form-field
               label
@@ -28,7 +28,7 @@ section#contacts.contacts
                 select
                   option Procedure of Interest
                   option Procedure of Interest
-        .contacts__form-group
+        .contacts__form-group(data-aos="fade-up")
           div
             .contacts__form-field
               label
@@ -41,10 +41,10 @@ section#contacts.contacts
                 select
                   option Best time to reach you
                   option Best time to reach you
-        .contacts__form-field
+        .contacts__form-field(data-aos="fade-up")
           label
             textarea(placeholder='How can we help you?')
-        .contacts__form-field.contact__form-field--btn
+        .contacts__form-field.contact__form-field--btn(data-aos="fade-up")
           .c-btn__wrapper.c-btn__wrapper--center
             button.c-btn(type='button')
               i
