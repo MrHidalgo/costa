@@ -1,0 +1,63 @@
+// SECTION :: START
+
+.recovery {
+  padding-top: 125px;
+  padding-bottom: 125px;
+  @include adaptive(1279) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    &-left {
+      width: calc(100% + 100px);
+      margin-right: -100px;
+      @include adaptive(1023) {
+        display: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-right {
+      z-index: 2;
+      position: relative;
+      width: 100%;
+      min-width: 950px;
+      max-width: 950px;
+      padding: 75px 100px;
+      background-image: url('../img/pattern-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @include adaptive(1535) {
+        padding: 50px 75px;
+      }
+      @include adaptive(1439) {
+        min-width: 800px;
+        max-width: 800px;
+      }
+      @include adaptive(1279) {
+        min-width: 600px;
+        max-width: 600px;
+        padding: 50px;
+      }
+      @include adaptive(1023) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+      @include adaptive(767) {
+        padding: 30px 20px;
+      }
+    }
+  }
+}
+
+// SECTION :: END

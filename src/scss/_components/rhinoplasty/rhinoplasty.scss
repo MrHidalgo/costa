@@ -1,0 +1,100 @@
+// SECTION :: START
+
+.rhinoplasty {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  @include adaptive(1439) {
+    padding-bottom: 100px;
+  }
+  @include adaptive(1279) {
+    padding-bottom: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    @include adaptive(1279) {
+      flex-wrap: wrap;
+    }
+
+    &-left,
+    &-right {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      @include adaptive(1439) {
+        max-width: 325px;
+      }
+      @include adaptive(1279) {
+        max-width: 50%;
+        height: 350px;
+      }
+      @include adaptive(767) {
+        height: 250px;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        @include adaptive(1279) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    &-middle {
+      flex: 1;
+      min-width: 1px;
+      max-width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+      @include adaptive(1535) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include adaptive(1279) {
+        order: 1;
+        flex: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 50px;
+      }
+      @include adaptive(767) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    &-left {
+      @include adaptive(1279) {
+        order: 2;
+      }
+    }
+
+    &-right {
+      @include adaptive(1279) {
+        order: 3;
+      }
+    }
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+      & + p {
+        padding-top: 30px;
+      }
+    }
+  }
+}
+
+// SECTION :: END
