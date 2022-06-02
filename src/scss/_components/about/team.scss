@@ -1,0 +1,56 @@
+// SECTION :: START
+
+.team {
+  position: relative;
+  padding-top: 75px;
+
+  &__cover {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50px);
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 40px 80px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(100px);
+    background-image: url('../img/pattern-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include adaptive(1365) {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 50px;
+    }
+    @include adaptive(1023) {
+      position: static;
+      transform: unset;
+    }
+
+    .c-header {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+// SECTION :: END
